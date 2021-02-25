@@ -45,10 +45,9 @@ def maxSubArray(nums):
         if max_curr > max_glob:
             max_glob = max_curr
 
-    print(max_glob)
     return max_glob
 
 
 maxSubArray([-3, 5, 2, -3, 1, -2])
-max_curr = -3, 5, 7, -1, 1, -1
-max_glob = -3, 5, 7, 7, 7, 7
+max_curr = 5, 7, 4, 5, 3
+max_glob = 5, 7, 7, 7, 7

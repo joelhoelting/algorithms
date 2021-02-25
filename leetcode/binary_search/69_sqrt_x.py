@@ -29,24 +29,21 @@ def mySqrt(x):
     Memory Usage: 13.4 MB, less than 30.61% of Python online submissions for Sqrt(x).
     """
 
+    l = 1
+    r = x
     if x < 2:
         return x
+    while l < r:
+        mid = l + (r - l) // 2
 
-    left_pointer = 1
-    right_pointer = x
-
-    while left_pointer < right_pointer:
-        mid = left_pointer + right_pointer // 2
-
-        print(left_pointer, right_pointer)
         if mid * mid == x:
             return mid
-        elif mid * mid > x:
-            right_pointer = mid
-        elif mid * mid < x:
-            left_pointer = mid + 1
-
-    return left_pointer - 1
+        if mid * mid > x:
+            r = mid
+        else:
+            l = mid + 1
+            
+    return l - 1
 
 
 mySqrt(14)
