@@ -3,7 +3,6 @@ def decode_variations(digits):
 
 def helper(digits, n): 
   count = [0] * (n + 1)
-  print(count)
 
   count[0] = 1 
   count[1] = 1 
@@ -16,11 +15,13 @@ def helper(digits, n):
     # and last digit is smaller than 7, then
     # last two digits form a valid character 
     if (digits[i - 2] == '1' or (digits[i - 2] == '2' and digits[i - 1] < '7') ): 
+      print(i)
       count[i] += count[i - 2]
 
+  print(count)
   return count[n]
  
 # Driver Code
-digits = "11111"; 
+digits = "12525"; 
 print("Count is" , decode_variations(digits)); 
  

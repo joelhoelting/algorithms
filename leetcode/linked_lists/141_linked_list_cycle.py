@@ -8,8 +8,6 @@ Note that pos is not passed as a parameter.
 
 Return true if there is a cycle in the linked list. Otherwise, return false.
 
-
-
 Example 1:
 
 Input: head = [3,2,0,-4], pos = 1

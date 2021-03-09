@@ -23,3 +23,5 @@ function root(x, n) {
 }
 
 console.log(root(7, 3));
+
+Math.pow(x, 1 / n).toFixed(3);
